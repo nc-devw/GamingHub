@@ -7,30 +7,35 @@ export default (input, addToast, dispatch) => {
 	if (input.length <= 1) return;
 	let command = input.slice(1);
 	let value;
-	if (/:/.test(command)) {
-		value = command.match(/(?<=:)\w*/)[0].trim();
-		command = command.match(/\w*(?=:)/)[0];
+	try {
+		if (/:/.test(command)) {
+			value = command.match(/:\w+/)[0].slice(1);
+			command = command.match(/\w+:/)[0].slice(0, -1);
+		}
+		switch (command) {
+			case 'joke': joke();
+				break;
+			case 'rainbow': rainbow();
+				break;
+			case 'color': color(value);
+				break;
+			case 'ricky': displayImgs(rickys);
+				break;
+			case 'surprise': surprise(dispatch);
+				break;
+			case 'powerRanger': displayImgs(powerRangers);
+				break;
+			case 'party': party()
+				break;
+			default:
+				command = '';
+				break;
+		}
+		if (command) addToast(`The '${command}' command was activated!`, { appearance: 'success' });
 	}
-	switch (command) {
-		case 'joke': joke();
-			break;
-		case 'rainbow': rainbow();
-			break;
-		case 'color': color(value);
-			break;
-		case 'ricky': displayImgs(rickys);
-			break;
-		case 'surprise': surprise(dispatch);
-			break;
-		case 'powerRanger': displayImgs(powerRangers);
-			break;
-		case 'party': party()
-			break;
-		default:
-			command = '';
-			break;
+	catch {
+		addToast(`The command was incorrect!`, { appearance: 'error' });
 	}
-	if (command) addToast(`The '${command}' command was Activated!`, { appearance: 'success' });
 }
 
 const joke = () => {

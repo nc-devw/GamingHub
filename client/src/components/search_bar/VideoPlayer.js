@@ -63,7 +63,7 @@ const VideoPlayer = ({ open, videoCode }) => {
 	};
 
 	const opts = {
-		width: document.documentElement.clientWidth - 150,
+		width: Math.min(document.documentElement.clientWidth - 150, 500),
 		playerVars: {
 			// https://developers.google.com/youtube/player_parameters
 			autoplay: 1,
