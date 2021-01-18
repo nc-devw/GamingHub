@@ -96,7 +96,7 @@ const UserOrderDetail = () => {
 					</DataTable>
 				</div>
 			</div>
-			<Btn className="btn btn-ppal mt-2" onClick={() => history.goBack()}><i className="fas fa-caret-left"></i> {s.goBack}</Btn>
+			<Btn className="btn btn-ppal mt-2" onClick={() => history.push('/orders')}><i className="fas fa-caret-left"></i> {s.goBack}</Btn>
 		</StyledOrderDetail>
 	)
 }
