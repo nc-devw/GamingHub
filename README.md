@@ -35,7 +35,7 @@
 
  ##### Contact:
 
- - **Email:** `ortiz.franco@yandex.com`
+ - **Email:** nc.devw@gmail.com`
 
 ```sh
  Feel free to email me, any feedback is welcome.
