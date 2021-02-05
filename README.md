@@ -1,6 +1,6 @@
 ### GamingHub Ecommerce ~ Final project of the intensive bootcamp "soyHenry"
 
- - **Demo:** `https://ecommerce-ft07-g07.vercel.app/`
+ - **Demo:** https://ecommerce-ft07-g07.vercel.app/
 
 ```sh
  You can test the web, create a user or 
@@ -35,7 +35,7 @@
 
  ##### Contact:
 
- - **Email:** nc.devw@gmail.com`
+ - **Email:** nc.devw@gmail.com
 
 ```sh
  Feel free to email me, any feedback is welcome.
